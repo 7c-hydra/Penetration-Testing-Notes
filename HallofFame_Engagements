@@ -1,6 +1,6 @@
 These are my most memorable LIVE real-world penetration testing findings. All were found within production systems. All sensitive data is removed here. 
 
-
+#BEST:
 1. SQLi into Shell
 Details
 
@@ -22,3 +22,7 @@ Details
 Impact
 
 Remediation/Fixes
+
+#WORST:
+1. Double VPN to Perform Azure Security Configuration Audit
+Details
