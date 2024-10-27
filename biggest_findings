@@ -1,0 +1,24 @@
+These are my most memorable LIVE real-world penetration testing findings. All were found within production systems. All sensitive data is removed here. 
+
+
+1. SQLi into Shell
+Details
+
+Impact
+
+Remediation/Fixes
+
+2. Citrix Breakout
+Details
+
+Impact
+
+Remediation/Fixes
+
+
+3. Two-Tier Thick Client 
+Details
+
+Impact
+
+Remediation/Fixes
