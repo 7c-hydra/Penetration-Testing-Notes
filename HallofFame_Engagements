@@ -7,7 +7,7 @@ Details:
  SQLMap with the --os-shell flag successfully called back using the PHP web server language. 
  This dropped me into a SQL-shell. This access permitted me to dump the databases which included sensitive data and unencrypted passwords. 
  The passwords were confirmed through user hijacking attacks (loging into victim users accounts). An immediate call to the client happened by the end of the day.
- Technology: IIS8.5, PHP Application, MySQL, Hosted in AWS
+ Technology: IIS8.5, PHP Application (phpMyAdmin), MySQL, Hosted in AWS
 
 Impact
 Server and database compromise. 
