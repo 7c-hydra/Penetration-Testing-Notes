@@ -3,7 +3,11 @@ These are my most memorable LIVE real-world penetration testing findings. All we
 #BEST:
 1. SQLi into Shell
 Details:
-Login and 'forgot password' functionality retained SQL injection that resulted in a shell being called back to my server. SQLMap with the --os-shell flag successfully called back using the PHP web server language. This dropped me into a SQL-shell. This access permitted me to dump the databases which included sensitive data and unencrypted passwords. The passwords were confirmed through user hijacking attacks (loging into victim users accounts). An immediate call to the client happened by the end of the day.
+ During a web application penetration test, I found that the login and 'forgot password' functionality retained SQL injection that resulted in a shell being called back to my server. 
+ SQLMap with the --os-shell flag successfully called back using the PHP web server language. 
+ This dropped me into a SQL-shell. This access permitted me to dump the databases which included sensitive data and unencrypted passwords. 
+ The passwords were confirmed through user hijacking attacks (loging into victim users accounts). An immediate call to the client happened by the end of the day.
+ Technology: IIS8.5, PHP Application, MySQL, Hosted in AWS
 
 Impact
 Server and database compromise. 
