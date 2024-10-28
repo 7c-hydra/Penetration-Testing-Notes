@@ -21,7 +21,7 @@ System was decommissioned immediately.
 - Notify Parties: Advised that the application owners alert clients and relevant parties to the security situation. 
 - Investigate: If possible, investigate logs to see if there is an existing or previous compromise.
 - Logging and Alerting: If not already implemented, institute alerting and monitoring to assist with any future breaches. 
-
+- Software Maintenance: Ensure that software, including the OS, PHP, and MySQL are all routinely patched using a software maintenance program. 
 
 2. Citrix Breakout
 Details
