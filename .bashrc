@@ -4,6 +4,8 @@
 
 export PS1="[\d \t] \u@\h:\w \\$ \[$(tput sgr0)\]"
 
+export PS1='\d\D{}\t_\u@\H\n\w:'
+
 # Auto-logging, change the logdir declaration to the location you would like the command-line logging to be saved. 
 date=$(date +%Y-%m-%d)
 logdir="$HOME/Desktop/Testing/_logging"
