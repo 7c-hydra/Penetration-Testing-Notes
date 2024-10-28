@@ -2,11 +2,22 @@ These are my most memorable LIVE real-world penetration testing findings. All we
 
 #BEST:
 1. SQLi into Shell
-Details
+Details:
+Login and 'forgot password' functionality retained SQL injection that resulted in a shell being called back to my server. SQLMap with the --os-shell flag successfully called back using the PHP web server language. This dropped me into a SQL-shell. This access permitted me to dump the databases which included sensitive data and unencrypted passwords. The passwords were confirmed through user hijacking attacks (loging into victim users accounts). An immediate call to the client happened by the end of the day.
 
 Impact
+Server and database compromise. 
 
 Remediation/Fixes
+System was decommissioned immediately. 
+- WAF: I advised a deploying a front-end WAF if the system could not be fixed right away. 
+- Secure Coding: Then to schedule secure coding to deal with the injection vulnerability using input validation and parameterized queries 
+- Secure Architecture: The database should be migrated to a second system, rather than colocated with the web server. All sensitive data within the database should be encrypted using a modern standard (e.g. AES).
+- Encrypt Data at Rest: User account passwords should be considered compromised and rotated pending security corrections that prevent the attack repeating.
+- Notify Parties: Advised that the application owners alert clients and relevant parties to the security situation. 
+- Investigate: If possible, investigate logs to see if there is an existing or previous compromise.
+- Logging and Alerting: If not already implemented, institute alerting and monitoring to assist with any future breaches. 
+
 
 2. Citrix Breakout
 Details
