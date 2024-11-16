@@ -41,3 +41,6 @@ Remediation/Fixes
 #WORST:
 1. Double VPN to Perform Azure Security Configuration Audit
 Details
+
+2. Healthcare App 
+Details: Very focused web application test with broken functionality. At the conclusion of the test, the POC argued about vulnerabilities. 
